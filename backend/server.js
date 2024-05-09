@@ -31,6 +31,8 @@ app.use("/api/user", userRouter)
 app.use("/api/cart", cartRouter)
 app.use("/api/order", orderRouter)
 
+app.use(express.static(path.join(__dirname, 'dist')));
+
 // app.get("/", (req,res)=>{
 //     res.send("API Working")
 // })
