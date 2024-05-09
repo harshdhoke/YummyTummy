@@ -7,7 +7,7 @@ const StoreContextProvider = (props) => {
 
   const [token, setToken] = useState("");
 
-  const url = "https://yummytummy-jwzr.onrender.com";
+  const url = "";
 
   const [cartItems, setCartItems] = useState({});
 

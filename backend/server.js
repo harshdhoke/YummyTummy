@@ -31,9 +31,13 @@ app.use("/api/user", userRouter)
 app.use("/api/cart", cartRouter)
 app.use("/api/order", orderRouter)
 
-app.get("/", (req,res)=>{
-    res.send("API Working")
-})
+// app.get("/", (req,res)=>{
+//     res.send("API Working")
+// })
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
 
 app.listen(port, ()=>{
     console.log(`Server is running on http://localhost:${port}`)
